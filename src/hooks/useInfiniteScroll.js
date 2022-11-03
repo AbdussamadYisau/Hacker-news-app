@@ -8,17 +8,12 @@ export const useInfiniteScroll = () => {
   const [count, setCount] = useState(STORY_INCREMENT);
 
   const handleScroll = debounce(() => {
-    console.log("Here", window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight);
-    // if (
-    //   window.innerHeight + document.documentElement.scrollTop !==
-    //     document.documentElement.offsetHeight ||
-    //   loading
-    // ) {
-    //   return false;
-    // }
-
-    if(loading) {
-        return false;
+    const bottom = Math.ceil(window.innerHeight + window.scrollY) >= document.documentElement.scrollHeight;
+    if (
+      !bottom ||
+      loading
+    ) {
+      return false;
     }
 
     setLoading(true);
