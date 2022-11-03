@@ -12,3 +12,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.center-text {
+  margin-top: 50vh;
+  margin-left: 45vw;
+}
+
+
+.loading {
+  background-color: #F7DC3C;
+  width: 1.5rem;
+  height: 1.5rem;
+  clip-path: circle(50% at 50% 50%);
+  display: inline-block;
+}
+
+.loading__spinner--1 {
+  animation: animateCircle 1s infinite;
+}
+
+.loading__spinner--2 {
+  animation: animateCircle 1s .2s infinite;
+
+}
+
+.loading__spinner--3 {
+  animation: animateCircle 1s .3s infinite;
+}
+
+@keyframes animateCircle {
+  0% {
+      transform: translateY(0);
+  }
+
+  50% {
+      transform: translateY(-2rem);
+  }
+
+  100% {
+      transform: translateY(0);
+  }
+}

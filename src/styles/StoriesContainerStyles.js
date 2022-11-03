@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
   html {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            background-color: #fafafe;
   }
   *, *:before, *:after {
     -webkit-box-sizing: inherit;
