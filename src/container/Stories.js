@@ -9,7 +9,11 @@ const {count, loading} = useInfiniteScroll();
   const [storyIds, setStoryIds] = useState([]);
   useEffect(() => {
     getStoryIds().then((ids) => ids && setStoryIds(ids));
-  }, []);
+  }, [count]);
+
+  useEffect(() => {
+    console.log("Count", count, loading);
+  }, [count, loading]);
   return (
     <>
     <GlobalStyle />

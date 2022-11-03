@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,memo } from "react";
 import { mapTime } from "../mappers/mapTime";
 import { getStory } from "../services/hackerNewsApi";
 import { StoryWrapper, StoryTitle, StoryMeta, StoryMetaElement} from "../styles/StoryStyles";
